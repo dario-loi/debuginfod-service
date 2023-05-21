@@ -1,0 +1,11 @@
+[Unit]
+Description=debuginfod Service
+Documentation=https://sourceware.org/elfutils/Debuginfod.html
+
+[Service]
+ExecStart=/usr/bin/debuginfod
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
